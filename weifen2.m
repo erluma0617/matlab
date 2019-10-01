@@ -1,0 +1,11 @@
+x=-2:0.005:2;
+y=x.^3;
+m=diff(y)./diff(x);
+m2=diff(m)./diff(x(1:end-1));
+plot(x,y,x(1:end-1),m,x(1:end-2),m2);
+xlabel('x','FontSize',18);
+ylabel('y','FontSize',18);
+legend('f(x)-x^3','f''(x)','f''''(x)',4);
+set(gca,'FontSize',18);
+%end-1,每次微分后，数值间间隔数少1
+%二次微分
