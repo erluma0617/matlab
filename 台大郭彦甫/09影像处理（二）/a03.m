@@ -1,0 +1,9 @@
+I=imread('rice.png');
+subplot(1,3,1);
+imshow(I);
+BG=imopen(I,strel('disk',15));
+subplot(1,3,2);
+imshow(BG);
+I2=imsubtract(I,BG);
+subplot(1,3,3);
+imshow(I2);
