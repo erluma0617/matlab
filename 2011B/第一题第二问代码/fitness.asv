@@ -1,0 +1,9 @@
+function fitnessVal = fitness( x )
+  
+%二元函数优化：
+ 
+fitnessVal = data(x(1),x(2));
+ 
+end
+ 
+ 
